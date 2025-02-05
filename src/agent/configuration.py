@@ -11,12 +11,7 @@ from langchain_core.runnables import RunnableConfig
 @dataclass(kw_only=True)
 class Configuration:
     """The configuration for the agent."""
-
-    # Changeme: Add configurable values here!
-    # these values can be pre-set when you
-    # create assistants (https://langchain-ai.github.io/langgraph/cloud/how-tos/configuration_cloud/)
-    # and when you invoke the graph
-    my_configurable_param: str = "changeme"
+    max_web_research_loops: int = 3
 
     @classmethod
     def from_runnable_config(
